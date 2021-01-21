@@ -23,12 +23,12 @@ date_format: Jan 2006
 #   Leave other parameters empty if not required.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
-  - certificate_url: https://confirm.udacity.com/CJLNKPNP/
-    date_end: "2020-06-22"
-    date_start: ""
-    description: ""
-    organization: Udacity
-    organization_url: https://www.udacity.com/
-    title: Deep Learning Nano Degree
-    url: ""
+- certificate_url: https://confirm.udacity.com/CJLNKPNP/
+  date_end: "2020-06-22"
+  date_start: "2020-05-23"
+  description: ""
+  organization: Udacity
+  organization_url: https://www.Udacity.com/
+  title: Deep Learning Nano Degree
+  url: ""
 ---
