@@ -29,11 +29,13 @@ experience:
     date_start: '2020-06-17'
     date_end: '2020-08-17'
     description: |2-
-        Responsibilities include:
+    
         
         • Successfully built Dialogflow based chatbot for Covid Self Assessment
+
         • Successfully built Dialogflow based chatbot for patient appointment booking
+
         • Integrated chatbot with backend nodejs based APIs and MongoDB db for
-        seamless integration with CureAssist app.
+          seamless integration with CureAssist app.
 
 ---
