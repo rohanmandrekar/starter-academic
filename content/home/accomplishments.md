@@ -24,7 +24,7 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
 - certificate_url:https://confirm.udacity.com/CJLNKPNP
-  date_end: "June 22, 2020"
+  date_end: "06/22/2020"
   date_start: ""
   description: ""
   organization:Udacity
