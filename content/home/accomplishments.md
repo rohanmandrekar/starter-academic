@@ -27,8 +27,8 @@ item:
    date_end: "2020-06-22"
    date_start: ""
    description: ""
-   organization:Udacity
+   organization: Udacity
    organization_url: https://www.udacity.com/
-   title:Deep Learning Nano Degree
+   title: Deep Learning Nano Degree
    url: ""
 ---
