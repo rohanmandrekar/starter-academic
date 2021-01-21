@@ -22,24 +22,18 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    location: California
-    date_start: '2017-01-01'
-    date_end: ''
+  - title: Intern
+    company: CureAssist
+    company_url: 'https://www.cureassist.co/'
+    location: Estonia (remote)
+    date_start: '2020-06-17'
+    date_end: '2020-08-17'
     description: |2-
         Responsibilities include:
         
-        * Analysing
-        * Modelling
-        * Deploying
-        
-  - title: Professor
-    company: University X
-    company_url: ''
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2016-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+        • Successfully built Dialogflow based chatbot for Covid Self Assessment
+        • Successfully built Dialogflow based chatbot for patient appointment booking
+        • Integrated chatbot with backend nodejs based APIs and MongoDB db for
+        seamless integration with CureAssist app.
+
 ---
