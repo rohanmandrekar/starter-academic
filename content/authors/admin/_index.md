@@ -28,7 +28,7 @@ education:
   - course: MS in Computer Science
     institution: The University of Texas at Arlington
     year: 2021-ongoing
-  - course: BTeach in Computer Engineering
+  - course: BTech in Computer Engineering
     institution: Mukesh Patel School of Technology Management and Engineering
     year: 2016-2020
 
