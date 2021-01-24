@@ -67,6 +67,6 @@ email: ""
 highlight_name: false
 ---
 
-Rohan Mandrekar is a student pursuing Masters in Computer Science at The Universoty of Texas at Arlington.
+Rohan Mandrekar is a student pursuing Masters in Computer Science at The University of Texas at Arlington.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
