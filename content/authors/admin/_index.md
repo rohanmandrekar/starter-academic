@@ -51,7 +51,7 @@ social:
   link: https://github.com/rohanmandrekar
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/rohan-mandrekar-a01409181/
+  link: www.linkedin.com/in/rohanmandrekar
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
