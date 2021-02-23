@@ -1,18 +1,18 @@
 ---
-title: Blog posts coming soon...
+title: Titanic - Machine Learning from Disaster
 subtitle: 
 
 # Summary for listings and search engines
-summary: 
+summary: Kaggle Titanic - Machine Learning from Disaster
 
 # Link this post with a project
 projects: []
 
 # Date published
-date: "2016-04-20T00:00:00Z"
+date: "2021-02-23T00:00:00Z"
 
 # Date updated
-lastmod: "2020-12-13T00:00:00Z"
+lastmod: "2021-02-23T00:00:00Z"
 
 # Is this an unpublished draft?
 draft: false
@@ -32,14 +32,23 @@ authors:
 - admin
 
 tags:
-- Coming soon
+- data mining
 
 categories:
-- Coming soon
+- blog
 ---
 
-## Keep an eye out
+##  
 
-New blog posts going to be up soon...
+<iframe
+
+       src="./titanic.html"
+       width="90%"
+       height="1000px"
+       style="border:none;">
+
+ </iframe>
+
+
 
 
