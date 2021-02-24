@@ -40,6 +40,21 @@ categories:
 
 ##  
 
+_Switch to dark mode for better readability_ : smile :
+
+#### Hypothesis score : 0.76555
+
+![png](./hypothesis.png)
+
+#### 1st submission score : 0.77511
+
+![png](./1st.png)
+
+#### Final submission _improved_ score : 0.78468
+
+![png](./final.png)
+
+
 ```python
 # This Python 3 environment comes with many helpful analytics libraries installed
 # It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python
