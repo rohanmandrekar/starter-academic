@@ -40,7 +40,7 @@ categories:
 
 ##  
 
-_Switch to dark mode for better readability_ : smile :
+{{< hl >}} _Switch to dark mode for better readability_ {{< /hl >}}
 
 #### Hypothesis score : 0.76555
 
@@ -53,6 +53,11 @@ _Switch to dark mode for better readability_ : smile :
 #### Final submission _improved_ score : 0.78468
 
 ![png](./final.png)
+
+
+[Scroll down to view the jupyter notebook, or click here to view the notebook on Kaggle](https://www.kaggle.com/rohanmandrekar/titanic)
+
+
 
 
 ```python
