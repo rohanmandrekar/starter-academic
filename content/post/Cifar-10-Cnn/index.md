@@ -74,7 +74,9 @@ The first model was the default model provided by PyTorch. This model set the ba
 To make the dataset more diverse I augmented the data a little using the following transforms :
 
 **Random Horizontal Flip**: Randomly flips some images horizontally from the dataset with probability p=0.1
+
 **Random Vertical Flip**: Randomly flips some images Vertically from the dataset with probability p=0.1
+
 **Random Rotate 45deg**: Randomly rotates images by 45 degrees from the dataset with a probablility p=0.1
 
 Surprisingly the Test accuracy in this case decreased, which was not expected.
@@ -91,23 +93,145 @@ transform = transforms.Compose(
 #### Test Accuracy : 47% ; Training Accuracy : not calculated ; Loss : 1.503
 
 ### Model 3:
+In my next attempt I tried to make the model more complex by adding another fully connected layer. A fully connected layer multiplies the input by a weight matrix and then adds a bias vector. [_Source_](https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.fullyconnectedlayer.html#:~:text=A%20fully%20connected%20layer%20multiplies%20the%20input%20by,to%20all%20the%20neurons%20in%20the%20previous%20layer.)
 
-#### Test Accuracy : 53% ; Training Accuracy : not calculated ; Loss : 1.278
+**Model before modifications :**
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, 10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+```
+
+**Model after modification :**
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 200)
+        self.fc2 = nn.Linear(200, 100)
+        self.fc3 = nn.Linear(100, 50)
+        self.fc4 = nn.Linear(50,10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = F.relu(self.fc3(x))
+        x = self.fc4(x)
+        return x
+```
+Unfortunately this too wasn't much useful as the test accuracy here decresed further by 1%
+
+#### Test Accuracy : 46% ; Training Accuracy : not calculated ; Loss : 1.511
 
 ### Model 4:
-#### Test Accuracy : 53% ; Training Accuracy : not calculated ; Loss : 1.278
+For the 4th attempt i decided to train the model for more epochs because training it for just 2 epochs was too less and the loss kept on decreasing as well.
+
+I also realised that the code was missing the training accuracy paramenter, so I made sure to add it this time
+```python
+# accuracy source: https://discuss.pytorch.org/t/calculate-train-accuracy-of-the-model-in-segmentation-task/33581
+        _, predicted = torch.max(outputs.data, 1)
+        total_train += labels.size(0)
+        correct_train += predicted.eq(labels).sum().item()
+        train_accuracy = 100 * correct_train / total_train
+        #avg_accuracy = train_accuracy / len(train_loader)
+
+```
+fortunately this time the test accuracy increased and the loss decreased.
+
+#### Test Accuracy : 58% ; Training Accuracy : 63.29% ; Loss : 1.041
 
 ### Model 5:
-#### Test Accuracy : 53% ; Training Accuracy : not calculated ; Loss : 1.278
+In the previous model while training I noticed training accuracy was stuck on 63% for 3 epochs, which made me think that lowering the learning rate might be effective here. So to I Trained the model for 25 epochs with Learning rate = 0.001 for 22 epochs, and then for 25 epochs again with learning rate = 0.0001. Doing this increased the training from 63.29% to 71.69% and resulted in a test accuracy of 61%
+
+#### Test Accuracy : 61% ; Training Accuracy : 71.69% ; Loss : 0.8
 
 ### Model 6:
-#### Test Accuracy : 53% ; Training Accuracy : not calculated ; Loss : 1.278
+
+
+**Before:**
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 200)
+        self.fc2 = nn.Linear(200, 100)
+        self.fc3 = nn.Linear(100, 50)
+        self.fc4 = nn.Linear(50,10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = F.relu(self.fc3(x))
+        x = self.fc4(x)
+        return x
+```
+
+**After:**
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(3, 32, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(32, 64, 5)
+        self.fc1 = nn.Linear(64 * 5 * 5, 800)
+        self.fc2 = nn.Linear(800,400)
+        self.fc3 = nn.Linear(400,200)
+        self.fc4 = nn.Linear(200,100)
+        self.fc5 = nn.Linear(100, 50)
+        self.fc6 = nn.Linear(50, 10)
+        self.dropout = nn.Dropout(p=0.1)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 64 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.dropout(x)
+        x = F.relu(self.fc3(x))
+        x = F.relu(self.fc4(x))
+        x = self.dropout(x)
+        x = F.relu(self.fc5(x))
+        x = self.fc6(x)
+       
+        return x
+```
+
+#### Test Accuracy : 69% ; Training Accuracy : 92.01% ; Loss : 0.249
 
 ### Model 7:
-#### Test Accuracy : 53% ; Training Accuracy : not calculated ; Loss : 1.278
+#### Test Accuracy : 72% ; Training Accuracy : 97.09%; Loss : 0.092
 
 ### Model 8:
-#### Test Accuracy : 53% ; Training Accuracy : not calculated ; Loss : 1.278
+#### Test Accuracy : 71% ; Training Accuracy : 95.38 ; Loss : 0.150
 
 
 
