@@ -70,7 +70,39 @@ training accuracy is missing for models 1-3 because I added the attribute in the
 
 #### Test Accuracy : 53% ; Training Accuracy : not calculated ; Loss : 1.278
 
-The first model was the default model provided by PyTorch. This model set the base for this project. My goal was to experiment with Network topology and other hyperparameters to improve the performance (increase test accuracy)
+The first model was the default model provided by PyTorch. This model set the base for this project. My goal was to experiment with Network topology and other hyperparameters to improve the performance (increase test accuracy).
+This model consisted of 2 Convolutional layers, 3 fully connected layers, a max pool layer which was applied to each of the convolutional layers. Before applying the max pool layer a Relu activation function was applied to the convolutional layers.
+
+The **Convolutional layer** creates a convolution kernel that is convolved with the layer input to produce a tensor of outputs. If use_bias is True, a bias vector is created and added to the outputs. [_Source_](https://keras.io/api/layers/convolution_layers/convolution2d/)
+
+A **fully connected layer** multiplies the input by a weight matrix and then adds a bias vector. [_Source_](https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.fullyconnectedlayer.html#:~:text=A%20fully%20connected%20layer%20multiplies%20the%20input%20by,to%20all%20the%20neurons%20in%20the%20previous%20layer.)
+
+**Maxpool2D** downsamples the input representation by taking the maximum value over the window defined by pool_size for each dimension along the features axis. The window is shifted by strides in each dimension. The resulting output when using "valid" padding option has a shape(number of rows or columns) of: output_shape = (input_shape - pool_size + 1) / strides). [_Source_](https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPool2D)
+
+**ReLU** stands for rectified linear activation unit, it returns 0 if it receives any negative input, but for any positive value x, it returns that value back. Thus it gives an output that has a range from 0 to infinity. [_Source_](https://www.mygreatlearning.com/blog/relu-activation-function/)
+
+
+
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, 10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+```
 
 
 ### Model 2:
@@ -101,7 +133,7 @@ transform = transforms.Compose(
 ### Model 3:
 
 #### Test Accuracy : 46% ; Training Accuracy : not calculated ; Loss : 1.511
-In my next attempt I tried to make the model more complex by adding another fully connected layer. A fully connected layer multiplies the input by a weight matrix and then adds a bias vector. [_Source_](https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.fullyconnectedlayer.html#:~:text=A%20fully%20connected%20layer%20multiplies%20the%20input%20by,to%20all%20the%20neurons%20in%20the%20previous%20layer.)
+In my next attempt I tried to make the model more complex by adding another fully connected layer.
 
 **Model before modifications :**
 ```python
@@ -179,7 +211,7 @@ In the previous model while training I noticed training accuracy was stuck on 63
 
 #### Test Accuracy : 69% ; Training Accuracy : 92.01% ; Loss : 0.249
 
-For this model I attempted to increase the number of nodes and add a dropout layer. The Dropout layer randomly sets input units to 0 with a frequency of rate at each step during training time, which helps prevent overfitting. Inputs not set to 0 are scaled up by 1/(1 - rate) such that the sum over all inputs is unchanged.[_Source_](https://keras.io/api/layers/regularization_layers/dropout/)
+For this model I attempted to increase the number of nodes and add a dropout layer. The **Dropout layer** randomly sets input units to 0 with a frequency of rate at each step during training time, which helps prevent overfitting. Inputs not set to 0 are scaled up by 1/(1 - rate) such that the sum over all inputs is unchanged.[_Source_](https://keras.io/api/layers/regularization_layers/dropout/)
 
 Doing this resulted in a significant increase in test accuracy.
 
@@ -323,6 +355,16 @@ class Net(nn.Module):
 Adding another convolutional layer for me was the biggest challenge. on my first attempt of adding another convolutional layer I simply changed the input and output parameters not realising that the required dimensions after flattening would also need to be changed. After facing errors after multiple trials i stumbled upon [Python Engineer's Tutorial on YouTube](https://www.youtube.com/watch?v=pDdP0TFzsoQ&t=882s&ab_channel=PythonEngineer) which perfectly explained how the dimesions of the image changes after applying each convolutional and MaxPool layer. Below is a screenshot from his video that explains the formula used to find the actual dimensions of the image after passing through the convolutional layer.
 
 ![png](./ytss.png)
+
+
+### My Observations:
+On observing the bar chart below, you will notice that the model, even on it's best performance struggled to classify birds, cats, dogs, and deers. One reason for this that I could come up with was that cats, dogs, and deers being 4-legged animals might have been difficult to distinguish. In my opinion to tackle this problem the model should have been made a little more complex.
+![png](./bar.png)
+
+A trend that I observed was that the performance of the model increased when the number of nodes in the model were increased.
+
+In the end this project was fun to do and was a great learning experience.
+
 
 
 
