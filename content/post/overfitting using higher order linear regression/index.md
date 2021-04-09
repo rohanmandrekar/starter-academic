@@ -753,7 +753,7 @@ I also struggled while trying to plot the graph for 'Train vs test error' for po
 ### My Observations:
 
 While performing L2(Ridge) Regularization I observed that overfitting reduced drastically as evident by the graph shown below.
-![png](./overfitting_24_1)
+![png](./overfitting_24_1.png)
 
 Doing this project helped clarify my concepts of overfitting and discover a way to prevent it from happening.
 
@@ -761,11 +761,17 @@ Doing this project helped clarify my concepts of overfitting and discover a way 
 
 ### References:
 [1] https://vitalflux.com/wp-content/uploads/2020/12/overfitting-and-underfitting-wrt-model-error-vs-complexity.png
+
 [2] https://www.ibm.com/cloud/learn/overfitting
+
 [3] https://moonbooks.org/Articles/How-to-implement-a-polynomial-linear-regression-using-scikit-learn-and-python-3-/
+
 [4] https://stackoverflow.com/questions/47303261/getting-weights-of-features-using-scikit-learn-logistic-regression
+
 [5] https://stackoverflow.com/questions/38191855/zero-pad-numpy-array
+
 [6] https://www.geeksforgeeks.org/creating-tables-with-prettytable-library-python/
+
 [7] https://inria.github.io/scikit-learn-mooc/python_scripts/linear_models_regularization.html
 
 
