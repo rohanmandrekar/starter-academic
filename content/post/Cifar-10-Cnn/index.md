@@ -366,6 +366,22 @@ A trend that I observed was that the performance of the model increased when the
 In the end this project was fun to do and was a great learning experience.
 
 
+### References:
+[1] https://pytorch.org/tutorials/_images/cifar10.png
+
+[2] https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html#sphx-glr-beginner-blitz-cifar10-tutorial-py
+
+[3] https://keras.io/api/layers/convolution_layers/convolution2d/
+
+[4] https://www.mathworks.com/help/deeplearning/ref/nnet.cnn.layer.fullyconnectedlayer.html#:~:text=A%20fully%20connected%20layer%20multiplies%20the%20input%20by,to%20all%20the%20neurons%20in%20the%20previous%20layer
+
+[5] https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPool2D
+
+[6] https://www.mygreatlearning.com/blog/relu-activation-function/
+
+[7] https://discuss.pytorch.org/t/calculate-train-accuracy-of-the-model-in-segmentation-task/33581
+
+[8] https://www.youtube.com/watch?v=pDdP0TFzsoQ&t=882s&ab_channel=PythonEngineer
 
 
 
