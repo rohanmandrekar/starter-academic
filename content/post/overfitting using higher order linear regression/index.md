@@ -740,24 +740,33 @@ plt.show()
 ### Based on best performance my model will be the one with *lambda 1/1000000* because here the difference between train and test error is almost negligible, it has lowest test error compared to other models, and the error is lesser than the error of the model with lambda 1/1000000000.
 
 
-```python
-
-```
 
 
 ### Challenges faced:
-Adding another convolutional layer for me was the biggest challenge. on my first attempt of adding another convolutional layer I simply changed the input and output parameters not realising that the required dimensions after flattening would also need to be changed. After facing errors after multiple trials i stumbled upon [Python Engineer's Tutorial on YouTube](https://www.youtube.com/watch?v=pDdP0TFzsoQ&t=882s&ab_channel=PythonEngineer) which perfectly explained how the dimesions of the image changes after applying each convolutional and MaxPool layer. Below is a screenshot from his video that explains the formula used to find the actual dimensions of the image after passing through the convolutional layer.
 
-![png](./ytss.png)
+Initially I struggled with implimenting polynomial regression, but [this blog](https://moonbooks.org/Articles/How-to-implement-a-polynomial-linear-regression-using-scikit-learn-and-python-3-/) helped me understand the concept and how to implement it.
 
+While adding the weights of the polynomials to the pretty table, i had to pad zeroes to it, to make all of them of the same length. But doing so messed up the weights of all the polynomials because it was a referenced variable. Using the .copy() function solved that problem for me.
+
+I also struggled while trying to plot the graph for 'Train vs test error' for polynomial regression of each order. My [TA](https://www.linkedin.com/in/ashaduzzaman-rubel-mondol) helped me out by pointing out where I went wrong.
 
 ### My Observations:
-On observing the bar chart below, you will notice that the model, even on it's best performance struggled to classify birds, cats, dogs, and deers. One reason for this that I could come up with was that cats, dogs, and deers being 4-legged animals might have been difficult to distinguish. In my opinion to tackle this problem the model should have been made a little more complex.
-![png](./bar.png)
 
-A trend that I observed was that the performance of the model increased when the number of nodes in the model were increased.
+While performing L2(Ridge) Regularization I observed that overfitting reduced drastically as evident by the graph shown below.
+![png](./overfitting_24_1)
 
-In the end this project was fun to do and was a great learning experience.
+Doing this project helped clarify my concepts of overfitting and discover a way to prevent it from happening.
+
+
+
+### References:
+[1] https://vitalflux.com/wp-content/uploads/2020/12/overfitting-and-underfitting-wrt-model-error-vs-complexity.png
+[2] https://www.ibm.com/cloud/learn/overfitting
+[3] https://moonbooks.org/Articles/How-to-implement-a-polynomial-linear-regression-using-scikit-learn-and-python-3-/
+[4] https://stackoverflow.com/questions/47303261/getting-weights-of-features-using-scikit-learn-logistic-regression
+[5] https://stackoverflow.com/questions/38191855/zero-pad-numpy-array
+[6] https://www.geeksforgeeks.org/creating-tables-with-prettytable-library-python/
+[7] https://inria.github.io/scikit-learn-mooc/python_scripts/linear_models_regularization.html
 
 
 
