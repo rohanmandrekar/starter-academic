@@ -62,7 +62,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-###Generate 20 data pairs (X, Y) using y = sin(2*pi*X) + 0.1 * N 
+### Generate 20 data pairs (X, Y) using y = sin(2*pi*X) + 0.1 * N 
 
 
 ```python
@@ -196,7 +196,7 @@ from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
 ```
 
-###Using root mean square error, find weights of polynomial regression for order is 0, 1, 3, 9
+### Using root mean square error, find weights of polynomial regression for order is 0, 1, 3, 9
 
 
 ```python
@@ -279,7 +279,7 @@ print('weights for degree 9: ',w9)
       1.70341143e+08 -3.62628790e+07]
     
 
-###Display weights in table
+### Display weights in table
 
 
 ```python
@@ -316,7 +316,7 @@ print(mytable)
     +----+---------+--------------------+---------------------+---------------------+
     
 
-###Draw a chart of fit data
+### Draw a chart of fit data
 
 
 ```python
@@ -379,7 +379,7 @@ plt.show()
 ![png](./overfitting_12_3.png)
 
 
-###Draw train error vs test error
+### Draw train error vs test error
 
 
 ```python
@@ -433,7 +433,7 @@ plt.show()
 ![png](./overfitting_14_1.png)
 
 
-###generate 100 more data and fit 9th order model and draw fit
+### generate 100 more data and fit 9th order model and draw fit
 
 
 
@@ -575,7 +575,7 @@ plt.show
 ![png](./overfitting_18_1.png)
 
 
-###Now we will regularize using the sum of weights
+### Now we will regularize using the sum of weights
 
 
 ```python
@@ -595,7 +595,7 @@ def l2ridge(x2,y2,alpha):
 
 ```
 
-###Draw chart for lambda is 1, 1/10, 1/100, 1/1000, 1/10000, 1/100000
+### Draw chart for lambda is 1, 1/10, 1/100, 1/1000, 1/10000, 1/100000
 
 
 ```python
@@ -686,7 +686,7 @@ plt.show()
 ![png](./overfitting_22_6.png)
 
 
-###Now draw test  and train error according to lamda 
+### Now draw test  and train error according to lamda 
 
 
 ```python
@@ -737,7 +737,7 @@ plt.show()
 ![png](./overfitting_24_1.png)
 
 
-###Based on best performance my model will be the one with *lambda 1/1000000* because here the difference between train and test error is almost negligible, it has lowest test error compared to other models, and the error is lesser than the error of the model with lambda 1/1000000000.
+### Based on best performance my model will be the one with *lambda 1/1000000* because here the difference between train and test error is almost negligible, it has lowest test error compared to other models, and the error is lesser than the error of the model with lambda 1/1000000000.
 
 
 ```python
