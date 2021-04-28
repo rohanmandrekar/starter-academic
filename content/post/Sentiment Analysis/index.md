@@ -83,6 +83,10 @@ Initialy when I attempted to implement the classifier on the IMDB dataset, only 
 
 I tried eleminating a few stop words from the data like 'the','a','and','of','is','to','this','was','in','that','it','for','as','with','are','on', and 'i' but this showed no change in the accuracy of the classifier.
 
+### Conclusion:
+
+I believe that, since the dataset had only 1000 inputs, the accuracy might have been lower. Having a larger dataset (more than 5000 sentences) could produce better results. In that case elemination of the stop words could also prove to be beneficial.
+
 ### References at the end of the page
 
 
