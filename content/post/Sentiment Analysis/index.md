@@ -57,7 +57,9 @@ Below is the formula for conditional probability using Bayes Theorem:
 
 ### What is the relevance of each word in 'Naive Bayes Classifier'?
 
-**Naive:** The word 'Naive' indicates that the algorithm assumes independence among attributes Xi when class is given: P(X1, X2, ..., Xd|Yj) = P(X1| Yj) P(X2| Yj)... P(Xd| Yj)
+**Naive:** The word 'Naive' indicates that the algorithm assumes independence among attributes Xi when class is given: 
+
+P(X1, X2, ..., Xd|Yj) = P(X1| Yj) P(X2| Yj)... P(Xd| Yj)
 
 **Bayes:** This signifies the use of Bayes theorem to calculate conditional probablity
 
@@ -68,10 +70,9 @@ Below is the formula for conditional probability using Bayes Theorem:
 If one of the conditional probabilities is zero, then the entire expression becomes zero. To solve this error we use Lapace Smoothing. To perform Laplace smoothing we add 1 to the numerator and 'v' to the denomenator of all probabilites. where 'v' is the total number of attribute values that Xi can take
 
 
-### Accuracy on test dataset before smoothening: 54%
+### Accuracy on test dataset before smoothening: {{< hl >}}54%{{< /hl >}}
 
-### Accuracy on test dataset after performing laplacian smoothening: 68%
-
+### Final accuracy on test dataset after performing laplacian smoothening: {{< hl >}}68%{{< /hl >}}
 
 
 ### Challenges faced:
