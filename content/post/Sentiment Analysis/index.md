@@ -42,7 +42,7 @@ categories:
 
 {{< hl >}} _Switch to dark mode for better readability_ {{< /hl >}}
 
-**Some outputs are shortened on the blog for easier reading.**
+**Some outputs are shortened on the blog for easier reading. For Complete Jupyter Notebook click below.**
 
 [_Link to Jupyter Notebook_](https://github.com/rohanmandrekar/Sentiment-Analysis/blob/main/Sentiment_Analysis.ipynb)
 
@@ -788,7 +788,7 @@ for i in range(0,10):
     some
     
 
-    
+
 
 
 ### References:
