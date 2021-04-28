@@ -1,6 +1,6 @@
 ---
 title: Sentiment Analysis using Naive Bayes Classifier
-subtitle: 
+subtitle: Implimenting Naive Bayes classifier from scratch for sentiment analysis of Yelp dataset
 
 # Summary for listings and search engines
 summary: Implimenting Naive Bayes classifier from scratch for sentiment analysis of Yelp dataset.
