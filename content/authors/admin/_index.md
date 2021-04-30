@@ -10,7 +10,7 @@ role: MS in Computer Science student at The University of Texas at Arlington
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name:
+- name: The University of Texas at Arlington
   url: 
 
 # Short bio (displayed in user profile at end of posts)
