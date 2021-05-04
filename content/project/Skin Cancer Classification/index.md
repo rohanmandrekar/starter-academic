@@ -44,7 +44,7 @@ url_video: ""
 
 {{< hl >}} _Switch to dark mode for better readability_ {{< /hl >}}
 
-[*CLICK HERE to download the project proposal*](./Project Proposal for Skin Cancer Classification.pdf)
+[*CLICK HERE to download the project proposal*](./ProjectProposalforSkinCancerClassification.pdf)
 
 [_Link to my Jupyter Notebook_](https://github.com/rohanmandrekar/Skin-Cancer-Classification/blob/main/Skin_Cancer_Detection.ipynb)
 
