@@ -10,7 +10,7 @@ date: "2021-05-04"
 external_link: "https://github.com/rohanmandrekar/Skin-Cancer-Classification"
 
 image:
-  caption: ABCDE's of detecting skin cancer source: https://www.hopehealthfnp.com/wp-content/uploads/2017/06/LSO-Skin-Cancer-Detection-Chart.png
+  -caption: ABCDE's of detecting skin cancer source https://www.hopehealthfnp.com/wp-content/uploads/2017/06/LSO-Skin-Cancer-Detection-Chart.png
   focal_point: Smart
 
 links:
@@ -37,3 +37,5 @@ url_video: ""
 
 ## Motivation(Why I chose this project):
 Early detection of skin cancer is vital to ensure successful treatment. An app that can self-diagnose any potential skin cancer within seconds with the ease of a button click can prove to be beneficial by greatly bringing down to cost and time for testing.
+
+
