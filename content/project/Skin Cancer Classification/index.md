@@ -23,14 +23,7 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 
-- icon: github
-  icon_pack: fab
-  name: Kaggle
-  url: https://www.kaggle.com/rohanmandrekar/skin-cancer-classification-using-cnn-96-test-acc
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
+
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -53,5 +46,3 @@ According to [skincancer.org](https://www.skincancer.org/skin-cancer-information
 
 ## What the app will look like:
 ![png](./app_demo.png) 
-
-
