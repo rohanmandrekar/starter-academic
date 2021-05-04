@@ -7,7 +7,7 @@ tags:
 date: "2021-05-04"
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://github.com/rohanmandrekar/Skin-Cancer-Classification"
+external_link:
 
 image:
   -caption: ABCDE's of detecting skin cancer source https://www.hopehealthfnp.com/wp-content/uploads/2017/06/LSO-Skin-Cancer-Detection-Chart.png
