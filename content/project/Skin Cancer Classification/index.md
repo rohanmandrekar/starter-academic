@@ -23,6 +23,15 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 
+- icon: github
+  icon_pack: fab
+  name: Kaggle
+  url: https://www.kaggle.com/rohanmandrekar/skin-cancer-classification-using-cnn-96-test-acc
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+
 # Slides (optional).
 #   Associate this project with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
@@ -35,7 +44,14 @@ url_video: ""
 
 {{< hl >}} _Switch to dark mode for better readability_ {{< /hl >}}
 
-## Motivation(Why I chose this project):
-Early detection of skin cancer is vital to ensure successful treatment. An app that can self-diagnose any potential skin cancer within seconds with the ease of a button click can prove to be beneficial by greatly bringing down to cost and time for testing.
+[*CLICK HERE to download the project proposal*](./Project Proposal for Skin Cancer Classification.pdf)
+
+[_Link to my Jupyter Notebook_](https://github.com/rohanmandrekar/Skin-Cancer-Classification/blob/main/Skin_Cancer_Detection.ipynb)
+
+# Motivation(Why I chose this project):
+According to [skincancer.org](https://www.skincancer.org/skin-cancer-information/skin-cancer-facts/) Skin cancer is the most common cancer in the United States and worldwide. 1 in 5 Americans will develop skin cancer by the age of 70. Early detection of skin cancer is vital to ensure successful treatment. An app that can self-diagnose any potential skin cancer within seconds with the ease of a button click can prove to be beneficial by greatly bringing down to cost and time for testing. Since the app also detects some diseases which appear like cancer, but are non-cancerous, it can alleviate the stress of people in such cases.
+
+## What the app will look like:
+![png](./app_demo.png) 
 
 
