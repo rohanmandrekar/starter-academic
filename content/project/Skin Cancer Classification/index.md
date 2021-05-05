@@ -61,6 +61,18 @@ After classifying the disease, the app can also show some information about
 the disease, and suggest the user to contact a dermatologist as soon as 
 possible
 
+## Explanation of a few algorithms:
+### Conv2D:
+2D convolution layer (e.g. spatial convolution over images).
+
+This layer creates a convolution kernel that is convolved with the layer input to produce a tensor of outputs. If use_bias is True, a bias vector is created and added to the outputs. Finally, if activation is not None, it is applied to the outputs as well.
+
+When using this layer as the first layer in a model, provide the keyword argument input_shape (tuple of integers, does not include the sample axis), e.g. input_shape=(128, 128, 3) for 128x128 RGB pictures in data_format="channels_last".
+
+Below is a GIF showing the working of the Conv2D layer:
+
+![gif](./conv2d.gif)
+
 ## My Contribution:
 I designed my own classifier from scratch. below is the architecture for the CNN model:
 
@@ -153,6 +165,9 @@ Graph showing training and validation loss trend:
 
 [3] https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
 
-[4]
+[4] https://medium.com/analytics-vidhya/everything-you-need-to-know-about-convolutional-neural-networks-cnns-3a82f7aa29c5
 
+[5] https://keras.io/api/layers/convolution_layers/convolution2d/
+
+[6] https://github.com/AxelThevenot/GIF_convolutions
 
