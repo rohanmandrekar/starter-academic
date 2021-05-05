@@ -172,6 +172,16 @@ Graph showing training and validation loss trend:
 
 ## Challenges Faced:
 
+Initially after training my model I noticed that the validation accuracy was too low (mid 60s). I then tried adjusting the learning rate to fix it, but got no great change.
+I then browsed other notebooks posted on Kaggle for this particular dataset. I came accross [Dhruv's](https://www.kaggle.com/dhruv1234/ham10000-skin-disease-classification) notebook which explained that the frequency of the classes were imbalanced (class melanocytic nevi had a far greater frequency than others). To fix this I had to use RandomOverSampler to make the frequency of the classes more balanced. Below are 2 graphs showing the frequncy of the classes before and after random over sampling.
+
+Before random over sampling:
+![png](./Skin_Cancer_Detection_12_2.png)
+
+After random over sampling:
+![png](./Skin_Cancer_Detection_14_2.png)
+
+
 
 ### References:
 
