@@ -108,15 +108,34 @@ I designed my own classifier from scratch. below is the architecture for the CNN
     _________________________________________________________________
     
 
+Test Accuracy achieved: 96.01%
+
+```python
+x_test=np.array(x_test).reshape(-1,28,28,3)
+loss, acc = model.evaluate(x_test, y_test, verbose=2)
+```
+
+    63/63 - 1s - loss: 0.1790 - accuracy: 0.9601
+    
+
+Graph showing training and validation accuracy trend:
+
+![png](./Skin_Cancer_Detection_20_0.png)
+
+Graph showing training and validation loss trend:
+
+![png](./Skin_Cancer_Detection_21_0.png)
+
+## Challenges Faced:
 
 
 ### References:
 
-[1]
+[1] https://www.kaggle.com/dhruv1234/ham10000-skin-disease-classification
 
-[2]
+[2] https://github.com/rohanmandrekar/Cifar-10-/blob/master/best_attempt%28model7%29.ipynb
 
-[3]
+[3] https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
 
 [4]
 
