@@ -73,6 +73,22 @@ Below is a GIF showing the working of the Conv2D layer:
 
 ![gif](./conv2d.gif)
 
+### MaxPool2D:
+Max pooling operation for 2D spatial data.
+
+Downsamples the input representation by taking the maximum value over the window defined by pool_size for each dimension along the features axis. The window is shifted by strides in each dimension. The resulting output when using "valid" padding option has a shape(number of rows or columns) of: output_shape = (input_shape - pool_size + 1) / strides)
+
+The resulting output shape when using the "same" padding option is: output_shape = input_shape / strides
+
+It returns a tensor of rank 4 representing the maximum pooled values. See above for output shape.
+
+### BatchNormalization layer:
+Layer that normalizes its inputs.
+
+Batch normalization applies a transformation that maintains the mean output close to 0 and the output standard deviation close to 1.
+
+Importantly, batch normalization works differently during training and during inference.
+
 ## My Contribution:
 I designed my own classifier from scratch. below is the architecture for the CNN model:
 
@@ -165,9 +181,11 @@ Graph showing training and validation loss trend:
 
 [3] https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000
 
-[4] https://medium.com/analytics-vidhya/everything-you-need-to-know-about-convolutional-neural-networks-cnns-3a82f7aa29c5
+[4] https://keras.io/api/layers/normalization_layers/batch_normalization/
 
 [5] https://keras.io/api/layers/convolution_layers/convolution2d/
 
 [6] https://github.com/AxelThevenot/GIF_convolutions
+
+[7] https://keras.io/api/layers/pooling_layers/max_pooling2d/
 
