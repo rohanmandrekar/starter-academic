@@ -181,6 +181,11 @@ Before random over sampling:
 After random over sampling:
 ![png](./Skin_Cancer_Detection_14_2.png)
 
+Doing this resulted in a significant jump in accuracy
+
+## Experiments and findings:
+After experimenting with many different architectures for the CNN model I realised that adding the BatchNormalization layer after each Dense, and MaxPooling2D layer can help increase the validation accuracy. Addition of Dropout layers can help prevent overfitting.  
+
 
 
 ### References:
