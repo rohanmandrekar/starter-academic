@@ -37,19 +37,29 @@ url_video: ""
 
 {{< hl >}} _Switch to dark mode for better readability_ {{< /hl >}}
 
-[*CLICK HERE to download the project proposal*](./ProjectProposalforSkinCancerClassification.pdf)
+[_**CLICK HERE to download the project proposal**_](./ProjectProposalforSkinCancerClassification.pdf)
 
-[_Link to my Jupyter Notebook_](https://github.com/rohanmandrekar/Skin-Cancer-Classification/blob/main/Skin_Cancer_Detection.ipynb)
+[_**Link to my Jupyter Notebook**_](https://github.com/rohanmandrekar/Skin-Cancer-Classification/blob/main/Skin_Cancer_Detection.ipynb)
 
-[Link to YouTube video for the webapp](https://youtu.be/IWHKOQYbfP0)
+[_**Link to YouTube video for the webapp**_](https://youtu.be/IWHKOQYbfP0)
 
-[_Link to my Kaggle submission_](https://www.kaggle.com/rohanmandrekar/skin-cancer-classification-using-cnn-96-test-acc)
+[_**Link to my Kaggle submission**_](https://www.kaggle.com/rohanmandrekar/skin-cancer-classification-using-cnn-96-test-acc)
 
 # Motivation(Why I chose this project):
 According to [skincancer.org](https://www.skincancer.org/skin-cancer-information/skin-cancer-facts/) Skin cancer is the most common cancer in the United States and worldwide. 1 in 5 Americans will develop skin cancer by the age of 70. Early detection of skin cancer is vital to ensure successful treatment. An app that can self-diagnose any potential skin cancer within seconds with the ease of a button click can prove to be beneficial by greatly bringing down to cost and time for testing. Since the app also detects some diseases which appear like cancer, but are non-cancerous, it can alleviate the stress of people in such cases.
 
 ## What the app will look like:
 ![png](./app_demo.png) 
+
+## Features supported by the App:
+User can click a picture of his/her infected skin region and upload it on the app. 
+The app will classify the disease into one of the following: actinic keratoses and 
+intraepithelial carcinoma, basal cell carcinoma, benign keratosis-like lesions, 
+dermatofibroma, melanocytic nevi, pyogenic granulomas and haemorrhage, 
+and melanoma.
+After classifying the disease, the app can also show some information about 
+the disease, and suggest the user to contact a dermatologist as soon as 
+possible
 
 ## My Contribution:
 I designed my own classifier from scratch. below is the architecture for the CNN model:
@@ -116,7 +126,13 @@ loss, acc = model.evaluate(x_test, y_test, verbose=2)
 ```
 
     63/63 - 1s - loss: 0.1790 - accuracy: 0.9601
-    
+
+Train Accuracy achieved: 99.79%
+
+Validation accuracy achieved: 98.61% 
+
+    Epoch 50/50
+    235/235 [==============================] - 2s 9ms/step - loss: 0.0068 - accuracy: 0.9979 - val_loss: 0.0518 - val_accuracy: 0.9861  
 
 Graph showing training and validation accuracy trend:
 
