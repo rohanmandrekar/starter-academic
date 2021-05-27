@@ -39,6 +39,8 @@ url_video: ""
 
 [_**CLICK HERE to download the project proposal**_](./ProjectProposalforSkinCancerClassification.pdf)
 
+[_**CLICK HERE to download a zip folder containing test images of skin lesions**_](./SkinLesionTestImages.zip)
+
 [_**Link to my Jupyter Notebook**_](https://github.com/rohanmandrekar/Skin-Cancer-Classification/blob/main/Skin_Cancer_Detection.ipynb)
 
 [_**Link to YouTube video for the webapp**_](https://youtu.be/IWHKOQYbfP0)
