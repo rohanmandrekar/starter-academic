@@ -93,7 +93,7 @@ phone = "(682) 298-5577"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "700 W Mitchell Cir", city = "Arlington", region = "TX", postcode = "76013", country = "United States", country_code = "US"}
+address = {street = "1002 Greek Row Dr", city = "Arlington", region = "TX", postcode = "76013", country = "United States", country_code = "US"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
@@ -126,7 +126,7 @@ contact_links = [
 sharing_image = ""
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter = "RohanPMandrekar"
+twitter = "RPMandrekar"
 
 ############################
 ## Regional Settings
