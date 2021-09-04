@@ -45,7 +45,7 @@ experience:
     company_url: 'https://www.cureassist.co/'
     location: Estonia (remote)
     date_start: '2020-06-17'
-    date_end: '2020-12-17'
+    date_end: '2020-08-17'
     description: |2-
 
         
