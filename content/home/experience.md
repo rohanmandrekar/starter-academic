@@ -51,11 +51,11 @@ experience:
     date_start: '2021-04-26'
     date_end: '2021-07-05'
     description: |2-
-          • Assisted 20+ clients and resolved technical issues each day
+        • Assisted 20+ clients and resolved technical issues each day
 
-          • Helped set up IMacs and PCs in 3 labs
-          
-          • Upgraded PC hardware of 100+ computers in 3 labs
+        • Helped set up IMacs and PCs in 3 labs
+
+        • Upgraded PC hardware of 100+ computers in 3 labs
 
  
   - title: Marketing Officer
