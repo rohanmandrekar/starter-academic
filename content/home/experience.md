@@ -22,15 +22,36 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: Student Assistant
+  - title: Device On-Boarding and Encryption
+    company: The University of Texas at Arlington
+    company_url: 
+    location: Arlington, Texas
+    date_start: '2021-07-05'
+    date_end: ''
+    description: |2-
+        • Singlehandedly automated encryption key upload process and reduced 12.9% weekly hours
+        • Set up remote management and encryption on 6+ new devices daily
+        • Guided 4 employees with software configuration and the encryption process
+        • Simplified the configuration process accelerating it by 4 times
+  - title: Events and resources Manager
+    company: Google Developer Student Clubs
+    company_url: 
+    location: Arlington, Texas
+    date_start: '2021-08-01'
+    date_end: ''
+    description:    
+
+  - title: Student Lab Assistant
     company: The University of Texas at Arlington
     company_url: 
     location: Arlington, Texas
     date_start: '2021-04-26'
-    date_end: ''
+    date_end: '2021-07-05'
     description: |2-
-  
-            • Student Assistant at the Office of Information Technology
+          • Assisted 20+ clients and resolved technical issues each day
+          • Helped set up IMacs and PCs in 3 labs
+          • Upgraded PC hardware of 100+ computers in 3 labs
+
  
   - title: Marketing Officer
     company: Engineering Student's Council at UTA
