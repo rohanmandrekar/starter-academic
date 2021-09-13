@@ -30,8 +30,11 @@ experience:
     date_end: ''
     description: |2-
         • Singlehandedly automated encryption key upload process and reduced 12.9% weekly hours
+
         • Set up remote management and encryption on 6+ new devices daily
+
         • Guided 4 employees with software configuration and the encryption process
+
         • Simplified the configuration process accelerating it by 4 times
   - title: Events and resources Manager
     company: Google Developer Student Clubs
@@ -49,7 +52,9 @@ experience:
     date_end: '2021-07-05'
     description: |2-
           • Assisted 20+ clients and resolved technical issues each day
+
           • Helped set up IMacs and PCs in 3 labs
+          
           • Upgraded PC hardware of 100+ computers in 3 labs
 
  
