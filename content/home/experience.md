@@ -22,12 +22,18 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Teaching Assistant
+    company: The University of Texas at Arlington
+    company_url:
+    location: Arlington, Texas
+    date_start: '2021-09-27'
+    date_end: ''
   - title: Device On-Boarding and Encryption
     company: The University of Texas at Arlington
     company_url: 
     location: Arlington, Texas
     date_start: '2021-07-05'
-    date_end: ''
+    date_end: '2021-09-24'
     description: |2-
         • Singlehandedly automated encryption key upload process and reduced 12.9% weekly hours
 
