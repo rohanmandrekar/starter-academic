@@ -37,6 +37,11 @@ url_video: ""
 
 {{< hl >}} _Switch to dark mode for better readability_ {{< /hl >}}
 
+# Blog incomplete (work in progress)
+# Blog incomplete (work in progress)
+# Blog incomplete (work in progress)
+# Blog incomplete (work in progress)
+
 # Motivation(Why I chose this project):
 
 
