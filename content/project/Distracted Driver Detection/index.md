@@ -17,7 +17,7 @@ links:
 - icon: github
   icon_pack: fab
   name: Github Rep
-  url: 
+  url: https://github.com/rohanmandrekar/Distracted-Driver-Detection
 url_code: ""
 url_pdf: ""
 url_slides: ""
